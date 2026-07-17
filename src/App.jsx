@@ -25,7 +25,19 @@ export default function App() {
 
       for (const id of SECTION_IDS) {
         const el = document.getElementById(id)
-        if (el && el.offsetTop <= scrollPos && el.offsetTop + el.offsetHeight > scrollPos) {
+        if (!el) continue
+        const rect = el.getBoundingClientRect()
+        const top = rect.top + window.scrollY
+        const bottom = top + rect.height
+        if (top <= scrollPos && bottom > scrollPos) {
+          // education & contact are side-by-side — pick by horizontal position
+          if (id === 'education' || id === 'contact') {
+            const contactRect = document.getElementById('contact')?.getBoundingClientRect()
+            if (contactRect) {
+              setActiveSection(window.innerWidth / 2 >= contactRect.left ? 'contact' : 'education')
+              break
+            }
+          }
           setActiveSection(id)
           break
         }
