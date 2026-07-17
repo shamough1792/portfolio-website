@@ -15,7 +15,7 @@ export default function Hero() {
           <a className={styles.btnPrimary} href="https://github.com/shamough1792" target="_blank" rel="noopener noreferrer">
             GitHub →
           </a>
-          <a className={styles.btnSecondary} href="#contact">
+          <a className={styles.btnSecondary} href="https://www.linkedin.com/in/kin-wang-lam/" target="_blank" rel="noopener noreferrer">
             LinkedIn
           </a>
         </div>

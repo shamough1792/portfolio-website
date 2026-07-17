@@ -21,7 +21,7 @@ export default function EducationContact() {
             🐙 <a className={styles.linkValue} href="https://github.com/shamough1792" target="_blank" rel="noopener noreferrer">github.com/shamough1792</a>
           </span>
           <span className={styles.link}>
-            💼 <span className={styles.linkValue}>LinkedIn</span>
+            💼 <a className={styles.linkValue} href="https://www.linkedin.com/in/kin-wang-lam/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
           </span>
           <span className={styles.link}>
             📧 <span className={styles.linkValue}>Email</span>
