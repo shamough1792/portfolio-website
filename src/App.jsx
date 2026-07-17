@@ -35,7 +35,7 @@ export default function App() {
 
   return (
     <>
-      <Navbar />
+      <Navbar activeSection={activeSection} />
       <main className={styles.container}>
         <Hero />
         <About />

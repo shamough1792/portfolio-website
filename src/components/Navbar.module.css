@@ -53,6 +53,9 @@
 .link:hover {
   color: var(--text-primary);
 }
+.linkActive {
+  color: var(--text-primary);
+}
 
 .resumeBtn {
   font-size: 12px;

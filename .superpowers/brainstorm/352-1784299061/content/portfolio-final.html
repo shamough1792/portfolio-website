@@ -1,0 +1,227 @@
+<h2>✅ 最終版 — GitHub Dark 主題</h2>
+<p class="subtitle">不對稱佈局 · CSS 變數換色 · 所有區塊定稿</p>
+
+<style>
+  .chips {
+    display: flex; flex-wrap: wrap; gap: 6px;
+  }
+  .chip {
+    display: inline-block;
+    padding: 2px 10px;
+    border-radius: 20px;
+    font-size: 11px;
+    border: 1px solid #30363d;
+    color: #8b949e;
+  }
+  .chip-active {
+    border-color: #58a6ff;
+    color: #58a6ff;
+    background: rgba(88,166,255,0.1);
+  }
+  .github-nav {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 12px 24px;
+    background: #0d1117;
+    border-bottom: 1px solid #21262d;
+  }
+  .section-title {
+    color: #58a6ff;
+    font-size: 12px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin: 0 0 16px;
+    font-weight: 600;
+  }
+</style>
+
+<div class="mockup" style="max-width: 960px; margin: 0 auto; border-radius: 12px; overflow: hidden; border: 1px solid #21262d;">
+
+  <!-- Nav -->
+  <div class="github-nav">
+    <span style="color: #f0f6fc; font-weight: bold; font-size: 16px;">&lt;SG /&gt;</span>
+    <div style="display: flex; gap: 16px; font-size: 13px; color: #8b949e;">
+      <span style="color: #f0f6fc;">關於</span>
+      <span>技能</span>
+      <span>專案</span>
+      <span>學歷</span>
+      <span>聯絡</span>
+      <span style="border: 1px solid #58a6ff; color: #58a6ff; padding: 2px 12px; border-radius: 6px; font-size: 12px;">Resume</span>
+    </div>
+  </div>
+
+  <!-- Hero 左右不對稱 -->
+  <div style="background: #0d1117; display: flex;">
+    <div style="flex: 1; padding: 64px 40px;">
+      <span style="background: #1f6feb; color: #fff; padding: 2px 10px; border-radius: 20px; font-size: 11px; font-weight: 600;">OPEN TO WORK</span>
+      <h1 style="color: #f0f6fc; font-size: 44px; margin: 16px 0 8px; font-weight: 800; letter-spacing: -1px;">Shamough</h1>
+      <p style="color: #58a6ff; font-size: 18px; margin: 0 0 20px;">Full-Stack Developer</p>
+      <p style="color: #8b949e; font-size: 14px; line-height: 1.6; max-width: 420px; margin: 0 0 24px;">
+        香港都會大學計算機科學學生。從 Web 到遊戲引擎，
+        喜歡把想法變成能動的東西。開源信仰者。
+      </p>
+      <div style="display: flex; gap: 12px;">
+        <span style="background: #238636; color: #fff; padding: 8px 20px; border-radius: 6px; font-size: 13px; font-weight: 600;">GitHub →</span>
+        <span style="border: 1px solid #30363d; color: #c9d1d9; padding: 8px 20px; border-radius: 6px; font-size: 13px;">LinkedIn</span>
+      </div>
+    </div>
+    <div style="background: #161b22; flex: 0.7; display: flex; align-items: center; justify-content: center; min-height: 320px;">
+      <div style="width: 140px; height: 140px; border-radius: 50%; background: linear-gradient(135deg, #58a6ff, #1f6feb); display: flex; align-items: center; justify-content: center; font-size: 48px; box-shadow: 0 0 40px rgba(88,166,255,0.3);">
+        🧑‍💻
+      </div>
+    </div>
+  </div>
+
+  <!-- About -->
+  <div style="background: #0d1117; padding: 40px; border-top: 1px solid #21262d;">
+    <div style="max-width: 700px;">
+      <h3 class="section-title">📋 關於我</h3>
+      <p style="color: #8b949e; font-size: 14px; line-height: 1.8; margin: 0;">
+        現居香港，就讀於香港都會大學計算機科學系。擅長全端 Web 開發，
+        主要使用 JavaScript/Node.js 與 Java，也有 Unreal Engine 4 遊戲開發經驗。
+        從零打造過交通 ETA 查詢、血壓追蹤系統等實際應用。
+      </p>
+    </div>
+  </div>
+
+  <!-- Skills — 水平條 -->
+  <div style="background: #0d1117; padding: 40px; border-top: 1px solid #21262d;">
+    <h3 class="section-title">🛠 技術棧</h3>
+    <div style="display: flex; flex-wrap: wrap; gap: 24px;">
+      <div>
+        <div style="color: #8b949e; font-size: 11px; margin-bottom: 8px;">FRONTEND</div>
+        <div class="chips">
+          <span class="chip chip-active">React</span>
+          <span class="chip">EJS</span>
+          <span class="chip">HTML/CSS</span>
+        </div>
+      </div>
+      <div>
+        <div style="color: #8b949e; font-size: 11px; margin-bottom: 8px;">BACKEND</div>
+        <div class="chips">
+          <span class="chip chip-active">Node.js</span>
+          <span class="chip chip-active">Java</span>
+          <span class="chip">Python</span>
+          <span class="chip">Shell</span>
+        </div>
+      </div>
+      <div>
+        <div style="color: #8b949e; font-size: 11px; margin-bottom: 8px;">其他</div>
+        <div class="chips">
+          <span class="chip">Unreal Engine 4</span>
+          <span class="chip">MySQL</span>
+          <span class="chip">Git</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Projects — 交錯卡片 -->
+  <div style="background: #0d1117; padding: 40px; border-top: 1px solid #21262d;">
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px;">
+      <h3 class="section-title" style="margin: 0;">📂 專案</h3>
+      <span style="color: #58a6ff; font-size: 12px;">View on GitHub →</span>
+    </div>
+
+    <!-- Project card template (repeating) -->
+    <div style="display: flex; flex-direction: column; gap: 16px;">
+      <div style="display: flex; gap: 0; background: #161b22; border-radius: 8px; overflow: hidden;">
+        <div style="width: 4px; background: #58a6ff; flex-shrink: 0;"></div>
+        <div style="padding: 20px 24px; flex: 1;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
+            <h4 style="color: #f0f6fc; margin: 0; font-size: 15px;">Blood Pressure Tracker</h4>
+            <span style="color: #8b949e; font-size: 11px;">2024</span>
+          </div>
+          <p style="color: #8b949e; font-size: 13px; margin: 0 0 10px;">血壓記錄系統 — Node.js + EJS</p>
+          <div class="chips">
+            <span class="chip chip-active">Node.js</span>
+            <span class="chip chip-active">EJS</span>
+            <span class="chip">MySQL</span>
+          </div>
+        </div>
+      </div>
+
+      <div style="display: flex; gap: 0; background: #161b22; border-radius: 8px; overflow: hidden; margin-left: 40px;">
+        <div style="padding: 20px 24px; flex: 1;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
+            <h4 style="color: #f0f6fc; margin: 0; font-size: 15px;">HKETA</h4>
+            <span style="color: #8b949e; font-size: 11px;">2025</span>
+          </div>
+          <p style="color: #8b949e; font-size: 13px; margin: 0 0 10px;">香港交通工具 ETA 即時查詢</p>
+          <div class="chips">
+            <span class="chip chip-active">JavaScript</span>
+          </div>
+        </div>
+        <div style="width: 4px; background: #21262d; flex-shrink: 0;"></div>
+      </div>
+
+      <div style="display: flex; gap: 0; background: #161b22; border-radius: 8px; overflow: hidden;">
+        <div style="width: 4px; background: #58a6ff; flex-shrink: 0;"></div>
+        <div style="padding: 20px 24px; flex: 1;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
+            <h4 style="color: #f0f6fc; margin: 0; font-size: 15px;">CourseWeb</h4>
+            <span style="color: #8b949e; font-size: 11px;">2025</span>
+          </div>
+          <p style="color: #8b949e; font-size: 13px; margin: 0 0 10px;">線上課程網站 — Java + 前端</p>
+          <div class="chips">
+            <span class="chip chip-active">Java</span>
+            <span class="chip">JavaScript</span>
+          </div>
+        </div>
+      </div>
+
+      <div style="display: flex; gap: 0; background: #161b22; border-radius: 8px; overflow: hidden; margin-left: 40px;">
+        <div style="padding: 20px 24px; flex: 1;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
+            <h4 style="color: #f0f6fc; margin: 0; font-size: 15px;">A Fallen Call</h4>
+            <span style="color: #8b949e; font-size: 11px;">2025</span>
+          </div>
+          <p style="color: #8b949e; font-size: 13px; margin: 0 0 10px;">Unreal Engine 4 恐怖遊戲「未知來電」</p>
+          <div class="chips">
+            <span class="chip chip-active">UE4</span>
+            <span class="chip">Blueprint</span>
+          </div>
+        </div>
+        <div style="width: 4px; background: #21262d; flex-shrink: 0;"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Education + Contact 左右並排 -->
+  <div style="background: #0d1117; display: flex; border-top: 1px solid #21262d;">
+    <div style="flex: 1; padding: 32px 40px; border-right: 1px solid #21262d;">
+      <h3 class="section-title">🎓 學歷</h3>
+      <div style="display: flex; gap: 12px; align-items: flex-start;">
+        <div style="width: 2px; background: #58a6ff; height: 48px; flex-shrink: 0; margin-top: 4px;"></div>
+        <div>
+          <div style="color: #f0f6fc; font-weight: 600; font-size: 14px;">香港都會大學 (HKMU)</div>
+          <div style="color: #8b949e; font-size: 13px;">計算機科學 學士</div>
+          <div style="color: #484f58; font-size: 12px;">2022 – 2025</div>
+        </div>
+      </div>
+    </div>
+    <div style="flex: 1; padding: 32px 40px;">
+      <h3 class="section-title">📬 聯絡</h3>
+      <div style="display: flex; flex-direction: column; gap: 10px; color: #8b949e; font-size: 13px;">
+        <span>🐙 <span style="color: #58a6ff;">github.com/shamough1792</span></span>
+        <span>💼 <span style="color: #58a6ff;">LinkedIn</span></span>
+        <span>📧 <span style="color: #58a6ff;">Email</span></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div style="background: #161b22; padding: 16px 40px; display: flex; justify-content: space-between; color: #484f58; font-size: 11px;">
+    <span>© 2026 Shamough</span>
+    <span>Built with React · Hosted on GitHub Pages</span>
+  </div>
+</div>
+
+<div class="section" style="margin-top: 24px; text-align: center;">
+  <p style="color: #8b949e; font-size: 13px;">
+    <span style="background: #21262d; padding: 2px 8px; border-radius: 4px; font-family: monospace;">--bg: #0d1117</span>
+    <span style="background: #21262d; padding: 2px 8px; border-radius: 4px; font-family: monospace; margin-left: 6px;">--card: #161b22</span>
+    <span style="background: #21262d; padding: 2px 8px; border-radius: 4px; font-family: monospace; margin-left: 6px;">--accent: #58a6ff</span>
+    <span style="background: #21262d; padding: 2px 8px; border-radius: 4px; font-family: monospace; margin-left: 6px;">--text: #f0f6fc</span>
+  </p>
+  <p style="color: #8b949e; font-size: 14px; margin-top: 12px;">這個設計你滿意嗎？確認後我就開始寫設計文件 + 實作計畫。</p>
+</div>

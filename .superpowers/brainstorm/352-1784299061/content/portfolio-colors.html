@@ -1,0 +1,136 @@
+<h2>🎨 顏色隨你換 — CSS Variables</h2>
+<p class="subtitle">整站顏色定義在 root，改三行就換一套主題</p>
+
+<style>
+  .theme-card {
+    background: #16213e;
+    border-radius: 10px;
+    padding: 24px;
+    margin-bottom: 16px;
+  }
+  .theme-card pre {
+    background: #0d1b2a;
+    padding: 12px 16px;
+    border-radius: 6px;
+    font-size: 12px;
+    color: #a0a0b8;
+    overflow-x: auto;
+  }
+  .color-dot {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    margin-right: 6px;
+    vertical-align: middle;
+    border: 2px solid rgba(255,255,255,0.1);
+  }
+  .palette-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin: 20px 0;
+  }
+  .palette-card {
+    background: #16213e;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.2s;
+  }
+  .palette-card:hover {
+    transform: translateY(-4px);
+  }
+</style>
+
+<div class="theme-card">
+  <h4 style="color: #fff; margin: 0 0 8px;">💡 核心概念</h4>
+  <p style="color: #a0a0b8; font-size: 13px; margin: 0;">
+    CSS 變數定義在 <code>:root</code>，換色不用到處改，三行搞定
+  </p>
+</div>
+
+<pre style="background: #0d1b2a; padding: 16px; border-radius: 8px; font-size: 13px; line-height: 1.6; overflow-x: auto; color: #a0a0b8;">
+:root {
+  --bg-primary: #1a1a2e;      /* 主背景 */
+  --bg-secondary: #16213e;    /* 卡片背景 */
+  --bg-accent: #0f3460;       /* 強調區塊 */
+  --accent: #e94560;          /* 主強調色 */
+  --text-primary: #ffffff;    /* 主文字 */
+  --text-secondary: #a0a0b8;  /* 次要文字 */
+  --text-muted: #555555;      /* 弱化文字 */
+}
+</pre>
+
+<h3 style="color: #fff; margin-top: 30px;">🎨 預設三套配色，一鍵切換</h3>
+<p class="subtitle">點一下就看效果，你也可以自訂自己的色盤</p>
+
+<div class="palette-grid">
+  <div class="palette-card" onclick="toggleSelect(this)">
+    <div style="display: flex; justify-content: center; gap: 6px; margin-bottom: 12px;">
+      <span class="color-dot" style="background: #1a1a2e;"></span>
+      <span class="color-dot" style="background: #e94560;"></span>
+      <span class="color-dot" style="background: #0f3460;"></span>
+    </div>
+    <h4 style="color: #fff; margin: 0 0 4px; font-size: 14px;">Coral</h4>
+    <p style="color: #a0a0b8; font-size: 11px; margin: 0;">深紫黑 · 珊瑚紅 · 深藍</p>
+  </div>
+
+  <div class="palette-card" onclick="toggleSelect(this)">
+    <div style="display: flex; justify-content: center; gap: 6px; margin-bottom: 12px;">
+      <span class="color-dot" style="background: #0a0a0a;"></span>
+      <span class="color-dot" style="background: #00ff41;"></span>
+      <span class="color-dot" style="background: #1a1a1a;"></span>
+    </div>
+    <h4 style="color: #fff; margin: 0 0 4px; font-size: 14px;">Matrix</h4>
+    <p style="color: #a0a0b8; font-size: 11px; margin: 0;">純黑 · 駭客綠 · 暗灰</p>
+  </div>
+
+  <div class="palette-card" onclick="toggleSelect(this)">
+    <div style="display: flex; justify-content: center; gap: 6px; margin-bottom: 12px;">
+      <span class="color-dot" style="background: #0d1117;"></span>
+      <span class="color-dot" style="background: #58a6ff;"></span>
+      <span class="color-dot" style="background: #21262d;"></span>
+    </div>
+    <h4 style="color: #fff; margin: 0 0 4px; font-size: 14px;">GitHub</h4>
+    <p style="color: #a0a0b8; font-size: 11px; margin: 0;">GitHub Dark · 藍 · 卡片灰</p>
+  </div>
+</div>
+
+<h3 style="color: #fff; margin-top: 30px;">📐 新版佈局結構</h3>
+<p class="subtitle">不對稱、有個性、顏色你自己決定</p>
+
+<div class="mockup" style="max-width: 900px; margin: 20px auto;">
+  <div style="background: #16213e; border-radius: 12px; overflow: hidden;">
+    <!-- Nav -->
+    <div style="display: flex; justify-content: space-between; align-items: center; padding: 14px 24px; border-bottom: 1px solid #0f3460;">
+      <span style="color: #e94560; font-weight: bold;">&lt;SG/&gt;</span>
+      <div style="display: flex; gap: 16px; font-size: 13px; color: #a0a0b8;">
+        <span>關於</span><span>技能</span><span>專案</span><span>學歷</span><span>聯絡</span>
+        <span style="background: #e94560; color: #fff; padding: 4px 12px; border-radius: 4px;">CV</span>
+      </div>
+    </div>
+    <!-- Content skeleton -->
+    <div style="padding: 32px 24px; display: flex; gap: 20px;">
+      <div style="flex: 1; display: flex; flex-direction: column; gap: 16px;">
+        <div style="background: #0f3460; height: 12px; width: 30%; border-radius: 4px;"></div>
+        <div style="background: #0f3460; height: 24px; width: 70%; border-radius: 4px;"></div>
+        <div style="background: #0f3460; height: 10px; width: 90%; border-radius: 4px;"></div>
+        <div style="background: #0f3460; height: 10px; width: 60%; border-radius: 4px;"></div>
+      </div>
+      <div style="width: 120px; height: 120px; background: #0f3460; border-radius: 50%; flex-shrink: 0;"></div>
+    </div>
+    <div style="padding: 0 24px 32px; display: flex; flex-wrap: wrap; gap: 8px;">
+      <div style="background: #0f3460; padding: 6px 14px; border-radius: 20px; font-size: 11px; color: #a0a0b8;">React</div>
+      <div style="background: #0f3460; padding: 6px 14px; border-radius: 20px; font-size: 11px; color: #a0a0b8;">Node.js</div>
+      <div style="background: #0f3460; padding: 6px 14px; border-radius: 20px; font-size: 11px; color: #a0a0b8;">Java</div>
+    </div>
+  </div>
+</div>
+
+<div class="section" style="margin-top: 20px; text-align: center;">
+  <p style="color: #a0a0b8; font-size: 13px;">
+    你挑一套順眼的配色（或給我你想要的色碼），我就繼續往下做完整的頁面。
+  </p>
+</div>

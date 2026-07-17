@@ -9,7 +9,7 @@ const NAV_ITEMS = [
   { label: '聯絡', href: '#contact' },
 ]
 
-export default function Navbar() {
+export default function Navbar({ activeSection }) {
   const [scrolled, setScrolled] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
 
@@ -37,7 +37,7 @@ export default function Navbar() {
         <ul className={`${styles.links} ${menuOpen ? styles.linksOpen : ''}`}>
           {NAV_ITEMS.map(item => (
             <li key={item.href}>
-              <button className={styles.link} onClick={() => handleClick(item.href)}>
+              <button className={`${styles.link} ${activeSection === item.href.replace('#', '') ? styles.linkActive : ''}`} onClick={() => handleClick(item.href)}>
                 {item.label}
               </button>
             </li>
