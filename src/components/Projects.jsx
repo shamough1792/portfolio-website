@@ -5,7 +5,7 @@ export default function Projects() {
   return (
     <section id="projects" className={styles.projects}>
       <div className={styles.header}>
-        <h2 className={styles.title}>📂 專案</h2>
+        <h2 className={styles.title}>📂 Projects</h2>
         <a className={styles.ghLink} href="https://github.com/shamough1792" target="_blank" rel="noopener noreferrer">
           View on GitHub →
         </a>

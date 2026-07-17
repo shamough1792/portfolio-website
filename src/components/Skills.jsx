@@ -4,17 +4,17 @@ const SKILLS = [
   {
     category: 'Frontend',
     items: ['React', 'EJS', 'HTML/CSS'],
-    active: [true, false, false],
+    active: [true, true, true],
   },
   {
     category: 'Backend',
-    items: ['Node.js', 'Java', 'Python', 'Shell'],
-    active: [true, true, false, false],
+    items: ['Node.js', 'JavaScript'],
+    active: [true, true],
   },
   {
     category: 'Other',
     items: ['Unreal Engine 4', 'MySQL', 'Git'],
-    active: [true, false, false],
+    active: [true, true, true],
   },
 ]
 
