@@ -10,7 +10,7 @@ export default function EducationContact() {
           <div>
             <div className={styles.school}>Hong Kong Metropolitan University (HKMU)</div>
             <div className={styles.degree}>B.Sc. in Computer Science</div>
-            <div className={styles.period}>2022 – 2025</div>
+            <div className={styles.period}>2022 – 2026</div>
           </div>
         </div>
       </div>
