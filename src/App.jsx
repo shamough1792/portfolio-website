@@ -8,7 +8,7 @@ import EducationContact from './components/EducationContact.jsx'
 import Footer from './components/Footer.jsx'
 import styles from './App.module.css'
 
-const SECTION_IDS = ['about', 'skills', 'projects', 'education', 'contact']
+const SECTION_IDS = ['about', 'skills', 'projects', 'education']
 
 export default function App() {
   const [activeSection, setActiveSection] = useState('')
@@ -19,7 +19,7 @@ export default function App() {
 
       // At the bottom of page, highlight the last section
       if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 10) {
-        setActiveSection('contact')
+        setActiveSection('education')
         return
       }
 
@@ -30,14 +30,6 @@ export default function App() {
         const top = rect.top + window.scrollY
         const bottom = top + rect.height
         if (top <= scrollPos && bottom > scrollPos) {
-          // education & contact are side-by-side — pick by horizontal position
-          if (id === 'education' || id === 'contact') {
-            const contactRect = document.getElementById('contact')?.getBoundingClientRect()
-            if (contactRect) {
-              setActiveSection(window.innerWidth / 2 >= contactRect.left ? 'contact' : 'education')
-              break
-            }
-          }
           setActiveSection(id)
           break
         }
