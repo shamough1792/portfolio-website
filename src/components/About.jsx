@@ -6,10 +6,10 @@ export default function About() {
       <div className={styles.inner}>
         <h2 className={styles.title}>📋 About Me</h2>
         <p className={styles.text}>
-          Based in Hong Kong, studying Computer Science at Hong Kong Metropolitan University.
-          Skilled in full-stack web development with JavaScript/Node.js and Java, with
-          experience in Unreal Engine 4 game development. Built real-world applications
-          including a transportation ETA tool and a blood pressure tracking system.
+          Computer Science Graduate from Hong Kong Metropolitan University, based in Hong Kong.
+          Skilled in full-stack development with JavaScript/Node.js, Java, and React Native.
+          Developed LockMatch, an innovative MBTI-based social matching application, along with other
+          real-world solutions including a transportation ETA tool and a health tracking system.
         </p>
       </div>
     </section>
