@@ -21,7 +21,7 @@ export default function Hero() {
         </div>
       </div>
       <div className={styles.right}>
-        <div className={styles.avatar}>🧑‍💻</div>
+        <img className={styles.avatar} src="/portfolio-website/icon.jpg" alt="avatar" />
       </div>
     </section>
   )
