@@ -50,8 +50,7 @@
   font-family: inherit;
   transition: color 0.2s;
 }
-.link:hover,
-.linkActive {
+.link:hover {
   color: var(--text-primary);
 }
 
