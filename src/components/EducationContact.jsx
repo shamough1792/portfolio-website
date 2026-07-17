@@ -26,6 +26,9 @@ export default function EducationContact() {
           <span className={styles.link}>
             📧 <a className={styles.linkValue} href="mailto:kinwanglam@gmail.com">kinwanglam@gmail.com</a>
           </span>
+          <span className={styles.link}>
+            📞 <a className={styles.linkValue} href="tel:+85251687587">+852 5168 7587</a>
+          </span>
         </div>
       </div>
     </section>
