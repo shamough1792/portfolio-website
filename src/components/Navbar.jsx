@@ -28,7 +28,9 @@ export default function Navbar({ activeSection }) {
   return (
     <nav className={`${styles.nav} ${scrolled ? styles.navScrolled : ''}`}>
       <div className={styles.inner}>
-        <span className={styles.logo}>&lt;SG /&gt;</span>
+        <span className={styles.logo}>
+          <img src="/portfolio-website/icon.jpg" alt="" className={styles.logoImg} />
+        </span>
 
         <button className={styles.hamburger} onClick={() => setMenuOpen(v => !v)}>
           {menuOpen ? '✕' : '☰'}
