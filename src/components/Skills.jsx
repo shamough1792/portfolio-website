@@ -12,7 +12,7 @@ const SKILLS = [
     active: [true, true, false, false],
   },
   {
-    category: '其他',
+    category: 'Other',
     items: ['Unreal Engine 4', 'MySQL', 'Git'],
     active: [true, false, false],
   },
@@ -21,7 +21,7 @@ const SKILLS = [
 export default function Skills() {
   return (
     <section id="skills" className={styles.skills}>
-      <h2 className={styles.title}>🛠 技術棧</h2>
+      <h2 className={styles.title}>🛠 Tech Stack</h2>
       <div className={styles.groups}>
         {SKILLS.map(group => (
           <div key={group.category}>

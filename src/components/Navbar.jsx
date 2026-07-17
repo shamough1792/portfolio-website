@@ -2,11 +2,11 @@ import { useState, useEffect } from 'react'
 import styles from './Navbar.module.css'
 
 const NAV_ITEMS = [
-  { label: '關於', href: '#about' },
-  { label: '技能', href: '#skills' },
-  { label: '專案', href: '#projects' },
-  { label: '學歷', href: '#education' },
-  { label: '聯絡', href: '#contact' },
+  { label: 'About', href: '#about' },
+  { label: 'Skills', href: '#skills' },
+  { label: 'Projects', href: '#projects' },
+  { label: 'Education', href: '#education' },
+  { label: 'Contact', href: '#contact' },
 ]
 
 export default function Navbar({ activeSection }) {

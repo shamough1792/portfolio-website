@@ -5,11 +5,11 @@ export default function Hero() {
     <section className={styles.hero}>
       <div className={styles.left}>
         <span className={styles.badge}>OPEN TO WORK</span>
-        <h1 className={styles.name}>Shamough</h1>
+        <h1 className={styles.name}>shamough1792</h1>
         <p className={styles.tagline}>Full-Stack Developer</p>
         <p className={styles.bio}>
-          香港都會大學計算機科學學生。從 Web 到遊戲引擎，
-          喜歡把想法變成能動的東西。開源信仰者。
+          CS student at Hong Kong Metropolitan University. From full-stack web
+          to Unreal Engine, I love turning ideas into working software.
         </p>
         <div className={styles.actions}>
           <a className={styles.btnPrimary} href="https://github.com/shamough1792" target="_blank" rel="noopener noreferrer">
