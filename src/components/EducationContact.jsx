@@ -24,7 +24,7 @@ export default function EducationContact() {
             💼 <a className={styles.linkValue} href="https://www.linkedin.com/in/kin-wang-lam/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
           </span>
           <span className={styles.link}>
-            📧 <span className={styles.linkValue}>Email</span>
+            📧 <a className={styles.linkValue} href="mailto:kinwanglam@gmail.com">kinwanglam@gmail.com</a>
           </span>
         </div>
       </div>
