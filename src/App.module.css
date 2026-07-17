@@ -1,0 +1,21 @@
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0;
+}
+
+.section {
+  padding: 64px 24px;
+  border-bottom: 1px solid var(--border);
+}
+
+.section:last-of-type {
+  border-bottom: none;
+}
+
+/* ponytail: max-width constraint keeps readability on wide screens */
+@media (max-width: 768px) {
+  .section {
+    padding: 40px 16px;
+  }
+}

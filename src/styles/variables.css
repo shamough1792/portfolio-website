@@ -1,3 +1,51 @@
+/* GitHub Dark palette -- change these to swap the entire theme */
 :root {
-  font-family: 'Inter', sans-serif;
+  --bg-primary:   #0d1117;
+  --bg-card:      #161b22;
+  --bg-nav:       #0d1117;
+  --border:       #21262d;
+  --accent:       #58a6ff;
+  --accent-hover: #79c0ff;
+  --green:        #238636;
+  --green-hover:  #2ea043;
+  --text-primary: #f0f6fc;
+  --text-secondary: #8b949e;
+  --text-muted:   #484f58;
+  --tag-bg:       rgba(88, 166, 255, 0.1);
+  --tag-border:   #30363d;
+
+  --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --max-width: 960px;
+  --nav-height: 60px;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-family);
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+a:hover {
+  color: var(--accent-hover);
+}
+
+::selection {
+  background: var(--accent);
+  color: var(--bg-primary);
 }
