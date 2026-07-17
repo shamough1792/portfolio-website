@@ -21,7 +21,7 @@ const projects = [
     description: 'Blood Pressure Tracker 記錄血壓',
     tags: ['Express', 'Node.js'],
     accent: true,
-    url: 'https://github.com/shamough1792/CourseWeb',
+    url: 'https://github.com/shamough1792/Blood_Pressure_Tracker',
   },
   {
     title: 'A Fallen Call',
