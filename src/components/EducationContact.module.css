@@ -1,0 +1,76 @@
+.wrapper {
+  display: flex;
+  border-bottom: 1px solid var(--border);
+}
+
+.block {
+  flex: 1;
+  padding: 40px 24px;
+}
+
+.block:first-child {
+  border-right: 1px solid var(--border);
+}
+
+.title {
+  color: var(--accent);
+  font-size: 12px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.timeline {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.line {
+  width: 2px;
+  background: var(--accent);
+  height: 48px;
+  flex-shrink: 0;
+  margin-top: 4px;
+}
+
+.school {
+  color: var(--text-primary);
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.degree {
+  color: var(--text-secondary);
+  font-size: 13px;
+}
+
+.period {
+  color: var(--text-muted);
+  font-size: 12px;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.link {
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+.linkValue {
+  color: var(--accent);
+}
+
+@media (max-width: 768px) {
+  .wrapper {
+    flex-direction: column;
+  }
+  .block:first-child {
+    border-right: none;
+    border-bottom: 1px solid var(--border);
+  }
+}
