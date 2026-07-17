@@ -1,0 +1,48 @@
+.skills {
+  padding: 64px 24px;
+  border-bottom: 1px solid var(--border);
+}
+
+.title {
+  color: var(--accent);
+  font-size: 12px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+  font-weight: 600;
+}
+
+.groups {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+}
+
+.groupLabel {
+  font-size: 11px;
+  color: var(--text-muted);
+  margin-bottom: 10px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tag {
+  display: inline-block;
+  padding: 4px 14px;
+  border-radius: 20px;
+  font-size: 12px;
+  border: 1px solid var(--tag-border);
+  color: var(--text-secondary);
+}
+
+.tagActive {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: var(--tag-bg);
+}
