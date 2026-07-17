@@ -14,23 +14,27 @@ export default function App() {
   const [activeSection, setActiveSection] = useState('')
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        for (const entry of entries) {
-          if (entry.isIntersecting) {
-            setActiveSection(entry.target.id)
-          }
-        }
-      },
-      { rootMargin: '-40% 0px -55% 0px' }
-    )
+    const handleScroll = () => {
+      const scrollPos = window.scrollY + window.innerHeight / 2
 
-    for (const id of SECTION_IDS) {
-      const el = document.getElementById(id)
-      if (el) observer.observe(el)
+      // At the bottom of page, highlight the last section
+      if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 10) {
+        setActiveSection('contact')
+        return
+      }
+
+      for (const id of SECTION_IDS) {
+        const el = document.getElementById(id)
+        if (el && el.offsetTop <= scrollPos && el.offsetTop + el.offsetHeight > scrollPos) {
+          setActiveSection(id)
+          break
+        }
+      }
     }
 
-    return () => observer.disconnect()
+    handleScroll()
+    window.addEventListener('scroll', handleScroll, { passive: true })
+    return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
   return (
