@@ -5,7 +5,7 @@ export default function Hero() {
     <section className={styles.hero}>
       <div className={styles.left}>
         <span className={styles.badge}>OPEN TO WORK</span>
-        <h1 className={styles.name}>shamough1792</h1>
+        <h1 className={styles.name}>Kin Wang Lam</h1>
         <p className={styles.tagline}>Full-Stack Developer</p>
         <p className={styles.bio}>
           CS student at Hong Kong Metropolitan University. From full-stack web
