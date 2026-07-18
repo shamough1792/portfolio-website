@@ -7,7 +7,7 @@ export default function Projects() {
       <div className={styles.header}>
         <h2 className={styles.title}>📂 Projects</h2>
         <a className={styles.ghLink} href="https://github.com/shamough1792" target="_blank" rel="noopener noreferrer">
-          View on GitHub →
+          View all on GitHub →
         </a>
       </div>
       <div className={styles.list}>
