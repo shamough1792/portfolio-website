@@ -8,8 +8,8 @@ export default function EducationContact() {
         <div className={styles.timeline}>
           <div className={styles.line} />
           <div>
-            <div className={styles.school}>Hong Kong Metropolitan University (HKMU)</div>
-            <div className={styles.degree}>B.Sc. in Computer Science</div>
+            <div className={styles.school}><a href="https://www.hkmu.edu.hk/" target="_blank" rel="noopener noreferrer">Hong Kong Metropolitan University (HKMU)</a></div>
+            <div className={styles.degree}><a href="https://www.hkmu.edu.hk/st/tc/computing/programmes/full-time/3-credit-unit/bschcsjs/" target="_blank" rel="noopener noreferrer">B.Sc. in Computer Science</a></div>
             <div className={styles.period}>2024 – 2026</div>
           </div>
         </div>
