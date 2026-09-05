@@ -11,6 +11,12 @@ const NAV_ITEMS = [
 export default function Navbar({ activeSection }) {
   const [scrolled, setScrolled] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
+  const [darkMode, setDarkMode] = useState(() => localStorage.getItem('portfolio-theme') === 'dark')
+
+  useEffect(() => {
+    document.documentElement.dataset.theme = darkMode ? 'dark' : 'light'
+    localStorage.setItem('portfolio-theme', darkMode ? 'dark' : 'light')
+  }, [darkMode])
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 60)
@@ -43,6 +49,16 @@ export default function Navbar({ activeSection }) {
               </button>
             </li>
           ))}
+          <li>
+            <button
+              className={styles.themeBtn}
+              onClick={() => setDarkMode(value => !value)}
+              aria-label={darkMode ? '切換至淺色模式' : '切換至深色模式'}
+              title={darkMode ? '淺色模式' : '深色模式'}
+            >
+              {darkMode ? '☼' : '☾'}
+            </button>
+          </li>
           <li>
             <a className={styles.resumeBtn} href="/portfolio-website/resume.pdf" download>
               Resume ↓

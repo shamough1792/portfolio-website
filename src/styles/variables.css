@@ -1,22 +1,42 @@
-/* GitHub Dark palette -- change these to swap the entire theme */
+/* Light canvas with deep-sea and coral accents */
 :root {
-  --bg-primary:   #0d1117;
-  --bg-card:      #161b22;
-  --bg-nav:       #0d1117;
-  --border:       #21262d;
-  --accent:       #58a6ff;
-  --accent-hover: #79c0ff;
-  --green:        #238636;
-  --green-hover:  #2ea043;
-  --text-primary: #f0f6fc;
-  --text-secondary: #8b949e;
-  --text-muted:   #484f58;
-  --tag-bg:       rgba(88, 166, 255, 0.1);
-  --tag-border:   #30363d;
+  --bg-primary: #f5f7f8;
+  --bg-card: #ffffff;
+  --bg-nav: rgba(245, 247, 248, .9);
+  --border: #dce3e8;
+  --accent: #ff7b6b;
+  --accent-hover: #ffab9f;
+  --green: #0f8f78;
+  --green-hover: #0a705f;
+  --text-primary: #10243e;
+  --text-secondary: #526174;
+  --text-muted: #8290a3;
+  --tag-bg: #fff1ee;
+  --tag-border: #dce3e8;
+  --nav-border: rgba(16, 36, 62, .12);
+  --grid-line: rgba(16, 36, 62, .035);
 
   --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  --max-width: 960px;
-  --nav-height: 60px;
+  --max-width: 1120px;
+  --nav-height: 76px;
+}
+
+:root[data-theme='dark'] {
+  --bg-primary: #0b1220;
+  --bg-card: #111d31;
+  --bg-nav: rgba(11, 18, 32, .86);
+  --border: rgba(166, 190, 220, .16);
+  --accent: #ff7b6b;
+  --accent-hover: #ffab9f;
+  --green: #67d7b1;
+  --green-hover: #8be5c6;
+  --text-primary: #f4f7fb;
+  --text-secondary: #a9b8cc;
+  --text-muted: #71839d;
+  --tag-bg: rgba(255, 123, 107, .1);
+  --tag-border: rgba(166, 190, 220, .2);
+  --nav-border: rgba(166, 190, 220, .18);
+  --grid-line: rgba(255, 255, 255, .025);
 }
 
 *, *::before, *::after {
@@ -35,6 +55,9 @@ body {
   color: var(--text-primary);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
+  background-image: linear-gradient(var(--grid-line) 1px, transparent 1px), linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
+  background-size: 48px 48px;
+  transition: background-color .3s ease, color .3s ease;
 }
 
 a {
