@@ -1,7 +1,14 @@
+import { useState } from 'react'
 import projects from '../data/projects.js'
 import styles from './Projects.module.css'
 
 export default function Projects() {
+  const [openProject, setOpenProject] = useState(null)
+
+  const toggleProject = (title) => {
+    setOpenProject(current => current === title ? null : title)
+  }
+
   return (
     <section id="projects" className={styles.projects}>
       <div className={styles.header}>
@@ -12,19 +19,19 @@ export default function Projects() {
       </div>
       <div className={styles.list}>
         {projects.map((p, i) => (
-          <a
+          <article
             key={p.title}
-            href={p.url}
-            target="_blank"
-            rel="noopener noreferrer"
             className={`${styles.card} ${i % 2 === 1 ? styles.offsetRight : ''}`}
+            data-open={openProject === p.title}
           >
             <div className={p.accent ? styles.accentBar : styles.accentBarMuted} />
             <div className={styles.cardBody}>
-              <div className={styles.cardTop}>
+              <button className={styles.cardToggle} onClick={() => toggleProject(p.title)} aria-expanded={openProject === p.title}>
+                <span className={styles.cardTop}>
                 <h3 className={styles.cardTitle}>{p.title}</h3>
-                <span className={styles.cardYear}>{p.year}</span>
-              </div>
+                  <span className={styles.cardMeta}><span className={styles.cardYear}>{p.year}</span><span className={styles.chevron}>{openProject === p.title ? '−' : '+'}</span></span>
+                </span>
+              </button>
               <p className={styles.cardDesc}>{p.description}</p>
               <div className={styles.tags}>
                 {p.tags.map(tag => (
@@ -33,8 +40,16 @@ export default function Projects() {
                   </span>
                 ))}
               </div>
+              {openProject === p.title && (
+                <div className={styles.details}>
+                  <p>{p.details}</p>
+                  <a className={styles.projectLink} href={p.url} target="_blank" rel="noopener noreferrer">
+                    View project on GitHub <span aria-hidden="true">↗</span>
+                  </a>
+                </div>
+              )}
             </div>
-          </a>
+          </article>
         ))}
       </div>
     </section>
