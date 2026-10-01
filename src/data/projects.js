@@ -37,12 +37,12 @@ const projects = [
   },
   {
     title: 'CantoneseVoiceInput',
-    year: '2025',
+    year: '2026',
     description: 'Lightweight Windows Cantonese voice-input desktop tool',
     details: 'CantoneseVoiceInput turns Cantonese speech into text and types it directly into the active cursor. It includes a floating capsule UI, system-tray integration and user-defined hotkeys, making voice input easy to access across Windows applications.',
     tags: ['Python', 'Selenium', 'Tkinter', 'PyInstaller'],
     accent: true,
-    url: 'https://github.com/shamough1792/Book-Management-System',
+    url: 'https://github.com/shamough1792/CantoneseVoiceInput',
   },
 ]
 
