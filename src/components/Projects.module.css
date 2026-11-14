@@ -18,6 +18,62 @@
   font-weight: 600;
 }
 
+.subheading {
+  margin: 0 0 16px;
+  color: var(--text-primary);
+  font-size: 17px;
+  font-weight: 650;
+}
+
+.moreProjects {
+  margin-top: 40px;
+  border-top: 1px solid var(--border);
+}
+
+.moreToggle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding: 18px 0;
+  color: var(--text-primary);
+  font-size: 16px;
+  font-weight: 650;
+  cursor: pointer;
+  list-style: none;
+}
+
+.moreToggle::-webkit-details-marker { display: none; }
+.moreMeta {
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+  margin-left: auto;
+}
+
+.moreIcon {
+  color: var(--accent);
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.moreProjects[open] .moreIcon { font-size: 0; }
+.moreProjects[open] .moreIcon::before {
+  content: '−';
+  font-size: 20px;
+}
+
+.projectCount {
+  margin-left: auto;
+  color: var(--text-muted);
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.moreProjects .list {
+  padding-bottom: 8px;
+}
+
 .ghLink {
   font-size: 13px;
   color: var(--accent);

@@ -27,7 +27,16 @@ export default function EducationContact() {
             📧 <a className={styles.linkValue} href="mailto:kinwanglam@gmail.com">kinwanglam@gmail.com</a>
           </span>
           <span className={styles.link}>
-            📞 <a className={styles.linkValue} href="tel:+85251687587">+852 5168 7587</a>
+            💬 <a className={styles.linkValue} href="https://discord.com/users/729716367988752507" target="_blank" rel="noopener noreferrer">Discord · shamough1792</a>
+          </span>
+          <span className={styles.link}>
+            🔗 <a className={styles.linkValue} href="https://fb.com/kinwang.lam" target="_blank" rel="noopener noreferrer">Facebook</a>
+          </span>
+          <span className={styles.link}>
+            📷 <a className={styles.linkValue} href="https://instagram.com/__shamough1792" target="_blank" rel="noopener noreferrer">Instagram</a>
+          </span>
+          <span className={styles.link}>
+            ▶️ <a className={styles.linkValue} href="https://www.youtube.com/@shamough1792o" target="_blank" rel="noopener noreferrer">YouTube</a>
           </span>
         </div>
       </div>

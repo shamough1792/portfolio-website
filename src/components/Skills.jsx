@@ -2,19 +2,16 @@ import styles from './Skills.module.css'
 
 const SKILLS = [
   {
-    category: 'Frontend',
-    items: ['React', 'EJS', 'HTML/CSS'],
-    active: [true, true, true],
+    category: 'Languages',
+    items: ['Python', 'JavaScript', 'TypeScript', 'Rust', 'Shell', 'HTML5', 'CSS'],
   },
   {
-    category: 'Backend',
-    items: ['Node.js', 'JavaScript'],
-    active: [true, true],
+    category: 'Frameworks & Runtimes',
+    items: ['Node.js', 'Express', 'Spring Boot', 'React', 'Vue.js', 'Apache Cordova'],
   },
   {
-    category: 'Other',
-    items: ['Unreal Engine 4', 'MySQL', 'Git'],
-    active: [true, true, true],
+    category: 'Data & Tooling',
+    items: ['MariaDB', 'MySQL', 'MongoDB', 'Docker', 'Linux', 'Git', 'Claude Code', 'OpenAI Codex', 'Unreal Engine'],
   },
 ]
 
@@ -27,10 +24,10 @@ export default function Skills() {
           <div key={group.category}>
             <div className={styles.groupLabel}>{group.category}</div>
             <div className={styles.tags}>
-              {group.items.map((item, i) => (
+              {group.items.map(item => (
                 <span
                   key={item}
-                  className={`${styles.tag} ${group.active[i] ? styles.tagActive : ''}`}
+                  className={styles.tag}
                 >
                   {item}
                 </span>

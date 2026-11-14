@@ -4,11 +4,12 @@ import Hero from './components/Hero.jsx'
 import About from './components/About.jsx'
 import Skills from './components/Skills.jsx'
 import Projects from './components/Projects.jsx'
+import OpenSource from './components/OpenSource.jsx'
 import EducationContact from './components/EducationContact.jsx'
 import Footer from './components/Footer.jsx'
 import styles from './App.module.css'
 
-const SECTION_IDS = ['about', 'skills', 'projects', 'education']
+const SECTION_IDS = ['about', 'skills', 'projects', 'open-source', 'education']
 
 export default function App() {
   const [activeSection, setActiveSection] = useState('')
@@ -49,6 +50,7 @@ export default function App() {
         <About />
         <Skills />
         <Projects />
+        <OpenSource />
         <EducationContact />
       </main>
       <Footer />

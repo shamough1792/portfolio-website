@@ -5,6 +5,7 @@ const NAV_ITEMS = [
   { label: 'About', href: '#about' },
   { label: 'Skills', href: '#skills' },
   { label: 'Projects', href: '#projects' },
+  { label: 'Open Source', href: '#open-source' },
   { label: 'Education/Contact', href: '#education' },
 ]
 

@@ -6,10 +6,10 @@ export default function About() {
       <div className={styles.inner}>
         <h2 className={styles.title}>📋 About Me</h2>
         <p className={styles.text}>
-          Computer Science Graduate from Hong Kong Metropolitan University, based in Hong Kong.
-          Skilled in full-stack development with JavaScript/Node.js and React Native.
-          Developed LockMatch, an innovative MBTI-based social matching application, along with other
-          real-world solutions including a transportation ETA tool and a health tracking system.
+          I am a Hong Kong Metropolitan University Computer Science graduate based in Hong Kong.
+          I build practical software end-to-end, with a focus on JavaScript, Node.js and React Native.
+          My projects include LockMatch, an MBTI-based social platform, plus tools for public transport,
+          health tracking and Cantonese voice input.
         </p>
       </div>
     </section>
