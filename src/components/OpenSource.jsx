@@ -18,7 +18,7 @@ export default function OpenSource() {
         </div>
         <div className={styles.stats}>
           <strong>40+</strong><span>merged PRs</span>
-          <strong>#5</strong><span>contributor rank</span>
+          <strong>#4</strong><span>contributor rank</span>
         </div>
       </div>
       <article className={styles.contribution}>
